@@ -19,6 +19,7 @@ namespace Portfoy.Models
         public string ProjectImageUrl { get; set; }
         public string ProjectUrl { get; set; }
         public Nullable<int> ProjectCategory { get; set; }
+        public Nullable<bool> Durum { get; set; }
     
         public virtual TblCategory TblCategory { get; set; }
     }

@@ -133,6 +133,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ConnectionController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\ExperienceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -236,9 +237,11 @@
     <Content Include="Admin\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Admin\general_elements.html" />
     <Content Include="Admin\icons.html" />
+    <Content Include="Admin\images\landing_page\DemhatYoldas.jpeg" />
     <Content Include="Admin\images\landing_page\stack-of-three-black-hot-stones-spa-salon-vector-16122479.jpg" />
     <Content Include="Admin\images\layout_img\american-express.png" />
     <Content Include="Admin\images\layout_img\bg1.png" />
+    <Content Include="Admin\images\layout_img\DemhatYoldas.jpeg" />
     <Content Include="Admin\images\layout_img\error.png" />
     <Content Include="Admin\images\layout_img\g1.jpg" />
     <Content Include="Admin\images\layout_img\g10.jpg" />
@@ -269,6 +272,7 @@
     <Content Include="Admin\images\layout_img\paypal.png" />
     <Content Include="Admin\images\layout_img\user_img.jpg" />
     <Content Include="Admin\images\layout_img\visa.png" />
+    <Content Include="Admin\images\logo\DemhatYoldas.jpeg" />
     <Content Include="Admin\images\logo\logo.png" />
     <Content Include="Admin\images\logo\logo_black.png" />
     <Content Include="Admin\images\logo\logo_icon.png" />
@@ -795,7 +799,9 @@
     <Content Include="Views\AdminLayout\_HeaderPartial.cshtml" />
     <Content Include="Views\AdminLayout\_SidebarPartial.cshtml" />
     <Content Include="Views\AdminLayout\_ScriptPartial.cshtml" />
-    <Content Include="Views\AdminLayout\_Topbar.cshtml" />
+    <Content Include="Views\Project\Index.cshtml" />
+    <Content Include="Views\AdminLayout\_TopbarPartial.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -805,7 +811,6 @@
     <Folder Include="Views\Contact\" />
     <Folder Include="Views\Education\" />
     <Folder Include="Views\Experience\" />
-    <Folder Include="Views\Project\" />
     <Folder Include="Views\Services\" />
     <Folder Include="Views\Skills\" />
     <Folder Include="Views\SocialMedia\" />

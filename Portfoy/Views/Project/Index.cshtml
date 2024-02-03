@@ -1,0 +1,52 @@
+﻿@model List<Portfoy.Models.TblProject>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<br />
+<br />
+
+<div>
+    <div class="white_shd full margin_bottom_30">
+        <div class="full graph_head">
+            <div class="heading1 margin_0">
+                <h2>Projelerim</h2>
+            </div>
+        </div>
+        <div class="table_section padding_infor_info">
+            <div class="table-responsive-sm">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Proje Adı</th>
+                            <th>Proje Kategorisi</th>
+                            <th>Proje Görsel</th>
+                            <th>Proje Link</th>
+                            <th>Durum</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ID</td>
+                                <td>@item.ProjectName</td>
+                                <td>@item.ProjectCategory</td>
+                                <td>@item.ProjectImageUrl</td>
+                                <td>@item.ProjectUrl</td>
+                                <td>@item.Durum</td>
+                                <td><button class="btn-danger">Sil</button></td>
+                                <td><button class="btn-success">Güncelle</button></td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

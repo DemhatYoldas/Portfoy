@@ -8,12 +8,6 @@ namespace Portfoy.Controllers
 {
     public class AdminLayoutController : Controller
     {
-        // GET: AdminLayout
-        public ActionResult Index()
-        {
-            return View();
-        }
-
         public ActionResult _HeaderPartial() 
         {
             return PartialView();
@@ -24,7 +18,7 @@ namespace Portfoy.Controllers
             return PartialView();
         }
 
-        public ActionResult _Topbar()
+        public ActionResult _TopbarPartial()
         {
             return PartialView();
         }

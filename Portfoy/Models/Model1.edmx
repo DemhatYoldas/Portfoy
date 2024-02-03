@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DbPortfolioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DbPortfolioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -84,6 +84,7 @@
           <Property Name="ProjectImageUrl" Type="nvarchar(max)" />
           <Property Name="ProjectUrl" Type="nvarchar(max)" />
           <Property Name="ProjectCategory" Type="int" />
+          <Property Name="Durum" Type="bit" />
         </EntityType>
         <EntityType Name="TblServices">
           <Key>
@@ -154,8 +155,7 @@
             <End Role="TblProject" EntitySet="TblProject" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DbPortfolioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -240,6 +240,7 @@
           <Property Name="ProjectUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ProjectCategory" Type="Int32" />
           <NavigationProperty Name="TblCategory" Relationship="Self.FK_TblProject_TblCategory" FromRole="TblProject" ToRole="TblCategory" />
+          <Property Name="Durum" Type="Boolean" />
         </EntityType>
         <EntityType Name="TblServices">
           <Key>
@@ -396,6 +397,7 @@
           <EntitySetMapping Name="TblProject">
             <EntityTypeMapping TypeName="DbPortfolioModel.TblProject">
               <MappingFragment StoreEntitySet="TblProject">
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
                 <ScalarProperty Name="ProjectImageUrl" ColumnName="ProjectImageUrl" />

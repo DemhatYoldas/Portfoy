@@ -1,13 +1,12 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   @Html.Partial("~/Views/AdminLayout/_HeaderPartial.cshtml")
+    @Html.Partial("~/Views/AdminLayout/_HeaderPartial.cshtml")
+    
 </head>
 <body class="dashboard dashboard_1">
     <div class="full_container">
@@ -27,21 +26,18 @@
                 <!-- dashboard inner -->
                 <div class="midde_cont">
                     <div class="container-fluid">
-                        @RenderBody()
-                    </div>
-                    <!-- footer -->
-                    <div class="container-fluid">
-                        <div class="footer">
-                            <p>
-                                Copyright © 2024 Designed by juniordevelopers All rights reserved.<br><br>
-                                Distributed By: <a href="#">JuniorDevelopers</a>
-                            </p>
-                        </div>
+                        @RenderBody() <!-- İçerik buraya eklenecek -->
                     </div>
                 </div>
                 <!-- end dashboard inner -->
             </div>
         </div>
+    </div>
+    <div class="footer">
+        <p>
+            Copyright © 2024 Designed by juniordevelopers All rights reserved.<br><br>
+            Distributed By: <a href="#">JuniorDevelopers</a>
+        </p>
     </div>
     @Html.Partial("~/Views/AdminLayout/_ScriptPartial.cshtml")
 </body>
