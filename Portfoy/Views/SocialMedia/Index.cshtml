@@ -1,8 +1,9 @@
-﻿@model List<Portfoy.Models.TblProject>
+﻿@model List<Portfoy.Models.TblSocialMedia>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
+
 <br />
 <br />
 <br />
@@ -11,11 +12,11 @@
     <div class="white_shd full margin_bottom_30">
         <div class="full graph_head">
             <div class="heading1 margin_0">
-                <h2>Projelerim</h2>
+                <h2>Sosyal Medya</h2>
             </div>
         </div>
         <div>
-            <a class="btn btn-success" href="/Project/CreateProject">Proje ekle</a>
+            <a class="btn btn-success" href="/SocialMedia/CreateSocialMedia">Sosyal Medya ekle</a>
         </div>
 
 
@@ -25,9 +26,8 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Proje Adı</th>
-                            <th>Proje Kategorisi</th>
-                            <th>Proje Link</th>
+                            <th>Sosyal Medya Adı</th>
+                            <th>Url</th>
                             <th>Durum</th>
                             <th>Sil</th>
                             <th>Güncelle</th>
@@ -38,9 +38,8 @@
                         {
                             <tr>
                                 <td>@item.ID</td>
-                                <td>@item.ProjectName</td>
-                                <td>@item.ProjectCategory</td>
-                                <td><a href="@item.ProjectUrl" class="btn btn-outline-success">@item.ProjectName Githup'da Aç</a></td>
+                                <td>@item.Name</td>
+                                <td><a href="@item.Url" class="btn btn-outline-dark fa fa-share ">@item.Name Sayfasına Git </a></td>
                                 <td>@item.Durum</td>
                                 <td><a href="#" class="btn btn-danger">Sil</a></td>
                                 <td><a href="#" class="btn btn-success">Güncelle</a></td>
@@ -53,3 +52,4 @@
         </div>
     </div>
 </div>
+

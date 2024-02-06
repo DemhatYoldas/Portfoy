@@ -15,5 +15,10 @@ namespace Portfoy.Controllers
             var values=db.TblProject.ToList();
             return View(values);
         }
+
+        public ActionResult CreateProject()
+        {
+            return View();
+        }
     }
 }

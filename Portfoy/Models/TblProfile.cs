@@ -12,13 +12,12 @@ namespace Portfoy.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class TblExperience
+    public partial class TblProfile
     {
         public int ID { get; set; }
+        public string Header { get; set; }
+        public string NameSurname { get; set; }
         public string Title { get; set; }
-        public Nullable<System.DateTime> WorkingDate { get; set; }
-        public Nullable<System.DateTime> EndDate { get; set; }
-        public string CompanyName { get; set; }
-        public Nullable<bool> Durum { get; set; }
+        public string GtihupUrl { get; set; }
     }
 }

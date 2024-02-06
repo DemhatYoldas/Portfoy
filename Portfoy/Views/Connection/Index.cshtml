@@ -1,8 +1,11 @@
-﻿@model List<Portfoy.Models.TblProject>
+﻿@model List<Portfoy.Models.TblConnection>
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
+
+
 <br />
 <br />
 <br />
@@ -11,23 +14,18 @@
     <div class="white_shd full margin_bottom_30">
         <div class="full graph_head">
             <div class="heading1 margin_0">
-                <h2>Projelerim</h2>
+                <h2>Bana Ulaşın</h2>
             </div>
         </div>
-        <div>
-            <a class="btn btn-success" href="/Project/CreateProject">Proje ekle</a>
-        </div>
-
-
         <div class="table_section padding_infor_info">
             <div class="table-responsive-sm">
                 <table class="table table-hover">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Proje Adı</th>
-                            <th>Proje Kategorisi</th>
-                            <th>Proje Link</th>
+                            <th>Konum</th>
+                            <th>Telefon Numarası</th>
+                            <th>Mail</th>
                             <th>Durum</th>
                             <th>Sil</th>
                             <th>Güncelle</th>
@@ -38,9 +36,9 @@
                         {
                             <tr>
                                 <td>@item.ID</td>
-                                <td>@item.ProjectName</td>
-                                <td>@item.ProjectCategory</td>
-                                <td><a href="@item.ProjectUrl" class="btn btn-outline-success">@item.ProjectName Githup'da Aç</a></td>
+                                <td>@item.Location</td>
+                                <td>@item.Number</td>
+                                <td>@item.Mail</td>
                                 <td>@item.Durum</td>
                                 <td><a href="#" class="btn btn-danger">Sil</a></td>
                                 <td><a href="#" class="btn btn-success">Güncelle</a></td>
@@ -53,3 +51,5 @@
         </div>
     </div>
 </div>
+
+

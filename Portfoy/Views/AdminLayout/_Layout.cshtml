@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    @Html.Partial("~/Views/AdminLayout/_HeaderPartial.cshtml")
+
+</head>
+<body class="dashboard dashboard_1">
+    <div class="full_container">
+        <div class="inner_container">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+                @Html.Partial("~/Views/AdminLayout/_SidebarPartial.cshtml")
+            </nav>
+            <!-- end sidebar -->
+            <!-- right content -->
+            <div id="content">
+                <!-- topbar -->
+                <div class="topbar">
+                    @Html.Partial("~/Views/AdminLayout/_TopbarPartial.cshtml")
+                </div>
+                <!-- end topbar -->
+                <!-- dashboard inner -->
+                <div class="midde_cont">
+                    <div class="container-fluid">
+                        @RenderBody() <!-- İçerik buraya eklenecek -->
+                    </div>
+                </div>
+                <!-- end dashboard inner -->
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>
+            Copyright © 2024 Designed by juniordevelopers All rights reserved.<br><br>
+            Distributed By: <a href="#">JuniorDevelopers</a>
+        </p>
+    </div>
+    @Html.Partial("~/Views/AdminLayout/_ScriptPartial.cshtml")
+</body>
+</html>
+

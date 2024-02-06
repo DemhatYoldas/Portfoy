@@ -28,14 +28,15 @@ namespace Portfoy.Models
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TblAbout> TblAbout { get; set; }
         public virtual DbSet<TblCategory> TblCategory { get; set; }
-        public virtual DbSet<TblConnection> TblConnection { get; set; }
         public virtual DbSet<TblContact> TblContact { get; set; }
-        public virtual DbSet<TblEducation> TblEducation { get; set; }
-        public virtual DbSet<TblExperience> TblExperience { get; set; }
         public virtual DbSet<TblProject> TblProject { get; set; }
         public virtual DbSet<TblServices> TblServices { get; set; }
-        public virtual DbSet<TblSkills> TblSkills { get; set; }
         public virtual DbSet<TblSocialMedia> TblSocialMedia { get; set; }
         public virtual DbSet<TblTestimonial> TblTestimonial { get; set; }
+        public virtual DbSet<TblProfile> TblProfile { get; set; }
+        public virtual DbSet<TblConnection> TblConnection { get; set; }
+        public virtual DbSet<TblEducation> TblEducation { get; set; }
+        public virtual DbSet<TblExperience> TblExperience { get; set; }
+        public virtual DbSet<TblSkills> TblSkills { get; set; }
     }
 }

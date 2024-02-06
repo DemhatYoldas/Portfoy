@@ -8,22 +8,27 @@ namespace Portfoy.Controllers
 {
     public class AdminLayoutController : Controller
     {
-        public ActionResult _HeaderPartial() 
+        public ActionResult _Layout() 
         {
             return PartialView();
         }
 
-        public ActionResult _SidebarPartial()
+        public PartialViewResult _HeaderPartial() 
         {
             return PartialView();
         }
 
-        public ActionResult _TopbarPartial()
+        public PartialViewResult _SidebarPartial()
         {
             return PartialView();
         }
 
-        public ActionResult _ScriptPartial()
+        public PartialViewResult _TopbarPartial()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult _ScriptPartial()
         {
             return PartialView();
         }

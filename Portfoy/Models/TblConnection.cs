@@ -15,9 +15,10 @@ namespace Portfoy.Models
     public partial class TblConnection
     {
         public int ID { get; set; }
-        public string Title { get; set; }
+        public string Location { get; set; }
         public string Number { get; set; }
         public string Mail { get; set; }
         public string Adress { get; set; }
+        public Nullable<bool> Durum { get; set; }
     }
 }

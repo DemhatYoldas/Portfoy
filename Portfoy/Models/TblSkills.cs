@@ -18,5 +18,6 @@ namespace Portfoy.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public string Skills { get; set; }
+        public Nullable<bool> Durum { get; set; }
     }
 }

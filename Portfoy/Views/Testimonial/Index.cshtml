@@ -1,8 +1,10 @@
-﻿@model List<Portfoy.Models.TblProject>
+﻿@model List<Portfoy.Models.TblTestimonial>
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
+
 <br />
 <br />
 <br />
@@ -11,11 +13,13 @@
     <div class="white_shd full margin_bottom_30">
         <div class="full graph_head">
             <div class="heading1 margin_0">
-                <h2>Projelerim</h2>
+                <h2>
+                    Referanslarım
+                </h2>
             </div>
         </div>
         <div>
-            <a class="btn btn-success" href="/Project/CreateProject">Proje ekle</a>
+            <a class="btn btn-success" href="/Testimonial/TestimonialCategory">Referans ekle</a>
         </div>
 
 
@@ -25,9 +29,10 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Proje Adı</th>
-                            <th>Proje Kategorisi</th>
-                            <th>Proje Link</th>
+                            <th>Adı Soyadı</th>
+                            <th>Açıklama</th>
+                            <th>Pozisyon</th>
+                            <th>Fotoğraf Url</th>
                             <th>Durum</th>
                             <th>Sil</th>
                             <th>Güncelle</th>
@@ -38,9 +43,10 @@
                         {
                             <tr>
                                 <td>@item.ID</td>
-                                <td>@item.ProjectName</td>
-                                <td>@item.ProjectCategory</td>
-                                <td><a href="@item.ProjectUrl" class="btn btn-outline-success">@item.ProjectName Githup'da Aç</a></td>
+                                <td>@item.NameSurname</td>
+                                <td>@item.Description</td>
+                                <td>@item.Position</td>
+                                <td>@item.ImageUrl</td>
                                 <td>@item.Durum</td>
                                 <td><a href="#" class="btn btn-danger">Sil</a></td>
                                 <td><a href="#" class="btn btn-success">Güncelle</a></td>
@@ -53,3 +59,6 @@
         </div>
     </div>
 </div>
+
+
+

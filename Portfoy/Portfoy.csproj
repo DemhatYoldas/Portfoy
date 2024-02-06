@@ -134,9 +134,10 @@
     <Compile Include="Controllers\ConnectionController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\ExperienceController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Controllers\SkillsController.cs" />
@@ -179,6 +180,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TblExperience.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TblProfile.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TblProject.cs">
@@ -648,6 +652,7 @@
     <Content Include="Tema\img\about-2.jpg" />
     <Content Include="Tema\img\bg-header.png" />
     <Content Include="Tema\img\bg-icon.png" />
+    <Content Include="Tema\img\Demhatyoldas.png" />
     <Content Include="Tema\img\profile.png" />
     <Content Include="Tema\img\project-1.jpg" />
     <Content Include="Tema\img\project-2.jpg" />
@@ -802,19 +807,27 @@
     <Content Include="Views\Project\Index.cshtml" />
     <Content Include="Views\AdminLayout\_TopbarPartial.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Project\CreateProject.cshtml" />
+    <Content Include="Views\AdminLayout\_Layout.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Connection\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Education\Index.cshtml" />
+    <Content Include="Views\Experience\Index.cshtml" />
+    <Content Include="Views\Services\Index.cshtml" />
+    <Content Include="Views\Skills\Index.cshtml" />
+    <Content Include="Views\SocialMedia\Index.cshtml" />
+    <Content Include="Views\Testimonial\Index.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\HeadPartial.cshtml" />
+    <Content Include="Views\Default\NavbarPartial.cshtml" />
+    <Content Include="Tema\Cv\Demhat YoldaşCv.pdf" />
+    <Content Include="Views\Default\HeaderPartial.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\About\" />
-    <Folder Include="Views\Category\" />
-    <Folder Include="Views\Connection\" />
-    <Folder Include="Views\Contact\" />
-    <Folder Include="Views\Education\" />
-    <Folder Include="Views\Experience\" />
-    <Folder Include="Views\Services\" />
-    <Folder Include="Views\Skills\" />
-    <Folder Include="Views\SocialMedia\" />
-    <Folder Include="Views\Testimonial\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
