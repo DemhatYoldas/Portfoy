@@ -31,5 +31,17 @@ namespace Portfoy.Controllers
             var values = db.TblProfile.ToList();
             return PartialView(values);
         }
+
+        public PartialViewResult AboutPartial()
+        {
+            var values=db.TblAbout.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult ExpertisePartial()
+        {
+            return PartialView();
+        }
+
     }
 }

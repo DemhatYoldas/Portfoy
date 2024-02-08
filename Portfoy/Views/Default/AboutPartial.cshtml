@@ -1,0 +1,29 @@
+﻿@model List<Portfoy.Models.TblAbout>
+
+@foreach (var item in Model)
+{
+    <div class="container-xxl py-6" id="about">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-5">
+                        <h3 class="lh-base mb-0">@item.Title</h3>
+                    </div>
+                    <p class="mb-4">@item.Description</p>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="/Tema/img/about-1.jpg" alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="/Tema/img/about-2.jpg" alt="">
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+}
+
+
