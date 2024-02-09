@@ -21,7 +21,7 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Title" Type="nvarchar" MaxLength="50" />
-          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar(max)" />
           <Property Name="Header" Type="nvarchar" MaxLength="50" />
           <Property Name="ImageUrl" Type="nvarchar(max)" />
         </EntityType>
@@ -73,8 +73,8 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Title" Type="nvarchar" MaxLength="50" />
-          <Property Name="WorkingDate" Type="smalldatetime" />
-          <Property Name="EndDate" Type="smalldatetime" />
+          <Property Name="WorkingDate" Type="int" />
+          <Property Name="EndDate" Type="int" />
           <Property Name="CompanyName" Type="nvarchar" MaxLength="50" />
           <Property Name="Durum" Type="bit" />
         </EntityType>
@@ -117,6 +117,7 @@
           <Property Name="Description" Type="nvarchar" MaxLength="50" />
           <Property Name="Skills" Type="nvarchar" MaxLength="50" />
           <Property Name="Durum" Type="bit" />
+          <Property Name="progressbar" Type="int" />
         </EntityType>
         <EntityType Name="TblSocialMedia">
           <Key>
@@ -190,7 +191,7 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Header" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ImageUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
@@ -285,8 +286,8 @@
           <EntitySet Name="TblProfile" EntityType="DbPortfolioModel.TblProfile" />
           <EntitySet Name="TblConnection" EntityType="DbPortfolioModel.TblConnection" />
           <EntitySet Name="TblEducation" EntityType="DbPortfolioModel.TblEducation" />
-          <EntitySet Name="TblExperience" EntityType="DbPortfolioModel.TblExperience" />
           <EntitySet Name="TblSkills" EntityType="DbPortfolioModel.TblSkills" />
+          <EntitySet Name="TblExperience" EntityType="DbPortfolioModel.TblExperience" />
         </EntityContainer>
         <EntityType Name="TblProfile">
           <Key>
@@ -320,17 +321,6 @@
           <Property Name="EndDate" Type="DateTime" Precision="0" />
           <Property Name="Durum" Type="Boolean" />
         </EntityType>
-        <EntityType Name="TblExperience">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="WorkingDate" Type="DateTime" Precision="0" />
-          <Property Name="EndDate" Type="DateTime" Precision="0" />
-          <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Durum" Type="Boolean" />
-        </EntityType>
         <EntityType Name="TblSkills">
           <Key>
             <PropertyRef Name="ID" />
@@ -339,6 +329,18 @@
           <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Skills" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Durum" Type="Boolean" />
+          <Property Name="progressbar" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TblExperience">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WorkingDate" Type="Int32" />
+          <Property Name="EndDate" Type="Int32" />
+          <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Durum" Type="Boolean" />
         </EntityType>
       </Schema>
@@ -471,6 +473,18 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="TblSkills">
+            <EntityTypeMapping TypeName="DbPortfolioModel.TblSkills">
+              <MappingFragment StoreEntitySet="TblSkills">
+                <ScalarProperty Name="progressbar" ColumnName="progressbar" />
+                <ScalarProperty Name="Durum" ColumnName="Durum" />
+                <ScalarProperty Name="Skills" ColumnName="Skills" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TblExperience">
             <EntityTypeMapping TypeName="DbPortfolioModel.TblExperience">
               <MappingFragment StoreEntitySet="TblExperience">
@@ -478,17 +492,6 @@
                 <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
                 <ScalarProperty Name="EndDate" ColumnName="EndDate" />
                 <ScalarProperty Name="WorkingDate" ColumnName="WorkingDate" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TblSkills">
-            <EntityTypeMapping TypeName="DbPortfolioModel.TblSkills">
-              <MappingFragment StoreEntitySet="TblSkills">
-                <ScalarProperty Name="Durum" ColumnName="Durum" />
-                <ScalarProperty Name="Skills" ColumnName="Skills" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>

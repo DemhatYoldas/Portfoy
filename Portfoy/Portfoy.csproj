@@ -826,6 +826,7 @@
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Default\AboutPartial.cshtml" />
     <Content Include="Views\Default\ExpertisePartial.cshtml" />
+    <Content Include="Views\Default\Deneme.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

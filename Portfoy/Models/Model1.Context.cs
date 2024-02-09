@@ -36,7 +36,7 @@ namespace Portfoy.Models
         public virtual DbSet<TblProfile> TblProfile { get; set; }
         public virtual DbSet<TblConnection> TblConnection { get; set; }
         public virtual DbSet<TblEducation> TblEducation { get; set; }
-        public virtual DbSet<TblExperience> TblExperience { get; set; }
         public virtual DbSet<TblSkills> TblSkills { get; set; }
+        public virtual DbSet<TblExperience> TblExperience { get; set; }
     }
 }

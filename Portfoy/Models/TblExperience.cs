@@ -16,8 +16,8 @@ namespace Portfoy.Models
     {
         public int ID { get; set; }
         public string Title { get; set; }
-        public Nullable<System.DateTime> WorkingDate { get; set; }
-        public Nullable<System.DateTime> EndDate { get; set; }
+        public Nullable<int> WorkingDate { get; set; }
+        public Nullable<int> EndDate { get; set; }
         public string CompanyName { get; set; }
         public Nullable<bool> Durum { get; set; }
     }

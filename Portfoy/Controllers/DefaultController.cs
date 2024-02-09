@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Mvc.Html;
 using Portfoy.Models;
 
 namespace Portfoy.Controllers
@@ -40,8 +41,14 @@ namespace Portfoy.Controllers
 
         public PartialViewResult ExpertisePartial()
         {
-            return PartialView();
+            var experience = db.TblExperience.ToList();
+            var education = db.TblEducation.ToList();
+            var skills = db.TblSkills.ToList();
+            var model = new Tuple<List<TblExperience>, List<TblEducation>, List<TblSkills>>(experience, education, skills);
+
+            return PartialView(model);
         }
+  
 
     }
 }
