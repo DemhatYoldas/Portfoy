@@ -1,0 +1,29 @@
+﻿<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/Tema/lib/wow/wow.min.js"></script>
+<script src="~/Tema/lib/easing/easing.min.js"></script>
+<script src="~/Tema/lib/waypoints/waypoints.min.js"></script>
+<script src="~/Tema/lib/typed/typed.min.js"></script>
+<script src="~/Tema/lib/counterup/counterup.min.js"></script>
+<script src="~/Tema/lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="~/Tema/lib/isotope/isotope.pkgd.min.js"></script>
+<script src="~/Tema/lib/lightbox/js/lightbox.min.js"></script>
+
+<!-- CV buttton script kodu-->
+<script>
+        document.getElementById('downloadButton').addEventListener('click', function () {
+            // CV dosyanızın URL'sini buraya yazın
+            var cvUrl = '/Tema/Cv/DemhatYoldaşCv.pdf';
+
+            // Yeni bir a etiketi oluşturun ve CV dosyasının indirme bağlantısını ayarlayın
+            var downloadLink = document.createElement('a');
+            downloadLink.href = cvUrl;
+            downloadLink.download = 'DemhatYoldaşCv.pdf'; // İndirilen dosyanın adı
+
+            // Oluşturulan bağlantıyı tıklayarak indirme işlemi gerçekleştirin
+            downloadLink.click();
+        });
+</script>
+<!-- CV buttton script kodu bitti -->
+
+<script src="~/Tema/js/main.js"></script>

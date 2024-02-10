@@ -49,6 +49,28 @@ namespace Portfoy.Controllers
             return PartialView(model);
         }
   
+        public PartialViewResult ProjectsPartial()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult TestimonialPartial()
+        { 
+            return PartialView(); 
+        }
+
+        public PartialViewResult ContactPartial()
+        { 
+            return PartialView(); 
+        }
+
+        public PartialViewResult CopyrightPartial()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult JavaScriptPartial()
+        { return PartialView(); }
 
     }
 }
