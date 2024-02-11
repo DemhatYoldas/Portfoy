@@ -51,12 +51,17 @@ namespace Portfoy.Controllers
   
         public PartialViewResult ProjectsPartial()
         {
-            return PartialView();
+            var projects=db.TblProject.ToList();
+            var category=db.TblCategory.ToList();
+            var model=new Tuple<List<TblProject>,List<TblCategory>>(projects, category);
+
+            return PartialView(model);
         }
 
         public PartialViewResult TestimonialPartial()
         { 
-            return PartialView(); 
+            var values=db.TblTestimonial.ToList();
+            return PartialView(values); 
         }
 
         public PartialViewResult ContactPartial()

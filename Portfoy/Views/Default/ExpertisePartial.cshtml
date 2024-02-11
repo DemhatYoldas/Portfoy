@@ -56,16 +56,21 @@
                         </div>
                     </div>
                     <!--Eğitim deneyim  bitti -->
+
                     <!--Eğitim kısmı -->
                     <div id="tab-2" class="tab-pane fade show p-0">
                         <div class="row gy-5 gx-4">
-                            <div class="col-sm-6">
-                                <h5>UI Design Course</h5>
-                                <hr class="text-primary my-2">
-                                <p class="text-primary mb-1">2000 - 2045</p>
-                                <h6 class="mb-0">Cambridge University</h6>
-                            </div>
-                          
+                            @foreach (var EducationItem in Model.Item2)
+                            {
+                                <div class="col-sm-6">
+                                    <h5>@EducationItem.Title</h5>
+                                    <hr class="text-primary my-2">
+                                    <p class="text-primary mb-1">@EducationItem.StartingDate - @EducationItem.EndDate</p>
+                                    <h6 class="mb-0">@EducationItem.EducationName</h6>
+                                </div>
+                            }
+
+
                         </div>
                     </div>
 
