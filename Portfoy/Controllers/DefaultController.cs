@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -64,10 +65,17 @@ namespace Portfoy.Controllers
             return PartialView(values); 
         }
 
+        [HttpGet]
         public PartialViewResult ContactPartial()
         { 
-            return PartialView(); 
+            var contact=db.TblContact.ToList();
+            var connection=db.TblConnection.ToList();
+            var socialmedia=db.TblSocialMedia.ToList();
+            var model = new Tuple<List<TblContact>, List<TblConnection>, List<TblSocialMedia>>(contact, connection, socialmedia);
+            return PartialView(model); 
         }
+
+        
 
         public PartialViewResult CopyrightPartial()
         {
