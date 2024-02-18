@@ -1,0 +1,59 @@
+﻿@model Portfoy.Models.TblEducation
+@{
+    ViewBag.Title = "UpdateEducation";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<br />
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Eğitim Güncelleme Sayfası</h5>
+                </div>
+                <div class="card-body">
+                    <form action="/Education/UpdateEducation" method="post">
+                        <!-- Post işlemi için form oluşturuluyor -->
+                        <div>
+                            <strong>Eğitim Durumu :</strong>
+                            <input type="text" class="form-control" id="Title" name="Title" value="@Model.Title" placeholder="Eğitim Durumunu Giriniz">
+                        </div>
+                        <br />
+                        <div>
+                            <strong>Okul Adı:</strong>
+                            <input type="text" class="form-control" id="EducationName" name="EducationName" value="@Model.EducationName" placeholder="Okul Adı Giriniz">
+                        </div>
+                        <br />
+                        <div>
+                            <strong>Başlangıç Tarihi:</strong>
+                            <input type="text" class="form-control" id="StartingDate" name="StartingDate" 
+                            value="@Model.StartingDate" placeholder="Başlangıç Tarihi Giriniz">
+                        </div>
+                        <br />
+                        <div>
+                            <strong>Bitiş Tarihi:</strong>
+                            <input type="text" class="form-control" id="EndDate" name="EndDate" value="@Model.EndDate" placeholder="Bitiş Tarihi Giriniz">
+                        </div>
+                        <br />
+                        <div>
+                            <strong>Durum:</strong>
+                            <select class="form-select form-select-lg" id="Durum" name="Durum" value="@Model.Durum" required>
+                                <option selected disabled>Durum Seçiniz</option>
+                                <option value="true" style="background-color: #28a745; color: #fff;">Aktif</option>
+                                <option value="false" style="background-color: #dc3545; color: #fff;">Pasif</option>
+                            </select>
+                        </div>
+                        <br />
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-success">Güncelle</button>
+                            <a href="/Contact/Index" class="btn btn-danger">Sayfadan Çık</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

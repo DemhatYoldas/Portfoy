@@ -652,6 +652,8 @@
     <Content Include="Tema\img\about-2.jpg" />
     <Content Include="Tema\img\bg-header.png" />
     <Content Include="Tema\img\bg-icon.png" />
+    <Content Include="Tema\img\cukurova.ico" />
+    <Content Include="Tema\img\cukurova.png" />
     <Content Include="Tema\img\Demhatyoldas.png" />
     <Content Include="Tema\img\profile.png" />
     <Content Include="Tema\img\project-1.jpg" />
@@ -838,6 +840,8 @@
     <Content Include="Views\Connection\CreateConnection.cshtml" />
     <Content Include="Views\Connection\UpdateConnection.cshtml" />
     <Content Include="Views\Contact\DurumContact.cshtml" />
+    <Content Include="Views\Education\CreateEducation.cshtml" />
+    <Content Include="Views\Education\UpdateEducation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
