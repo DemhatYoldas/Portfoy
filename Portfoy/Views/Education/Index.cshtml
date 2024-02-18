@@ -44,7 +44,7 @@
                                 <td>@item.EducationName</td>
                                 <td>@item.StartingDate</td>
                                 <td>@item.EndDate</td>
-                                <td style="color: @(item.Durum == true ? "green" : "red")">@Html.Raw(item.Durum == true ? "Aktif" : "Pasif")</td>
+                                <td style="color: @(item.Durum == true ? "green" : "red")">@Html.Raw(item.Durum == true ? "Bitti" : "Devam ediyor")</td>
                                 <td><a href="/Education/DeleteEducation/@item.ID" class="btn btn-danger">Sil</a></td>
                                 <td><a href="/Education/UpdateEducation/@item.ID" class="btn btn-success">Güncelle</a></td>
 

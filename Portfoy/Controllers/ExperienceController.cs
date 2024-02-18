@@ -16,5 +16,8 @@ namespace Portfoy.Controllers
             var values=db.TblExperience.ToList();
             return View(values);
         }
+
+
+
     }
 }
