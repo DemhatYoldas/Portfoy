@@ -39,8 +39,10 @@
                                 <td>@item.Mail</td>
                                 <td>@item.Title</td>
                                 <td>@item.SendDate</td>
-                                <td><a href="/Contact/DurumContact/@item.ID" class="btn btn-danger">İçerik Görüntüle</a></td>
-                                <td>@(item.İsRead == true ? "Aktif" : "Pasif")</td>
+                                <td>
+                                    <a href="/Contact/DurumContact/@item.ID" class="btn btn-outline-info">İçerik Görüntüle</a>
+                                </td>
+                                <td style="color: @(item.İsRead == true ? "red" : "green")">@Html.Raw(item.İsRead == true ? "Okunmadı" : "Okundu")</td>
                             </tr>
                         }
 

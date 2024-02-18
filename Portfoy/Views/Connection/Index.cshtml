@@ -35,14 +35,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var item in Model.Where(x => x.Durum == true))
+                        @foreach (var item in Model)
                         {
                             <tr>
                                 <td>@item.ID</td>
                                 <td>@item.Location</td>
                                 <td>@item.Number</td>
                                 <td>@item.Mail</td>
-                                <td>@(item.Durum == true ? "Aktif" : "Pasif")</td>
+                                <td style="color: @(item.Durum == true ? "green" : "red")">@Html.Raw(item.Durum == true ? "Aktif" : "Pasif")</td>
                                 <td><a href="/Connection/DeleteConnection/@item.ID" class="btn btn-danger">Sil</a></td>
                                 <td><a href="/Connection/UpdateConnection/@item.ID" class="btn btn-success">Güncelle</a></td>
                             </tr>

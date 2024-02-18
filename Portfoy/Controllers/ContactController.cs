@@ -16,11 +16,27 @@ namespace Portfoy.Controllers
             return View(values);
         }
 
-        [HttpGet]
+       
         public ActionResult DurumContact(int id)
         {
             var values = db.TblContact.Find(id);
             return View(values);
+        }
+
+        public ActionResult isreadContact(int id)
+        {
+            var value = db.TblContact.Find(id);
+            if (value != null)
+            {
+                value.İsRead = false;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return RedirectToAction("Index");
+            }
+
         }
     }
 }
