@@ -832,10 +832,15 @@
     <Content Include="Views\Default\ContactPartial.cshtml" />
     <Content Include="Views\Default\CopyrightPartial.cshtml" />
     <Content Include="Views\Default\JavaScriptPartial.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Category\CreateCategory.cshtml" />
+    <Content Include="Views\Category\UpdateCategory.cshtml" />
+    <Content Include="Views\Connection\CreateConnection.cshtml" />
+    <Content Include="Views\Connection\UpdateConnection.cshtml" />
+    <Content Include="Views\Contact\DurumContact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\About\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

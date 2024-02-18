@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Portfoy.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,18 @@ namespace Portfoy.Controllers
 {
     public class ContactController : Controller
     {
-        // GET: Contact
+        DbPortfolioEntities db = new DbPortfolioEntities();
         public ActionResult Index()
         {
-            return View();
+            var values = db.TblContact.ToList();
+            return View(values);
+        }
+
+        [HttpGet]
+        public ActionResult DurumContact(int id)
+        {
+            var values = db.TblContact.Find(id);
+            return View(values);
         }
     }
 }

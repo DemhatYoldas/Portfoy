@@ -1,0 +1,50 @@
+﻿@model Portfoy.Models.TblConnection
+
+@{
+    ViewBag.Title = "UpdateConnection";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<br />
+<br />
+<br />
+<form class="form-control" method="post">
+
+    <div class="form-group">
+        <label for="ID" class="form-label h5">Connection ID</label>
+        <input type="text" class="form-control" id="ID" value="@Model.ID" name="ID" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Location" class="form-label h5">Konum </label>
+        <input type="text" class="form-control" id="Location" name="Location" value="@Model.Location" placeholder="Konum Adı Giriniz" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Adress" class="form-label h5">Adres </label>
+        <input type="text" class="form-control" id="Adress" name="Adress" value="@Model.Adress" placeholder="Konum Adı Giriniz" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Number" class="form-label h5">Telefon No </label>
+        <input type="text" class="form-control" id="Number" name="Number" value="@Model.Number" placeholder="Telefon Numaranızı Giriniz" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Mail" class="form-label h5">Mail </label>
+        <input type="text" class="form-control" id="Mail" name="Mail" value="@Model.Mail" placeholder="Mail Adresinizi Giriniz" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Durum" class="form-label h5">Durum</label>
+        <select class="form-select form-select-lg" id="Durum" value="@Model.Durum" name="Durum" required>
+            <option selected disabled>Durum Seçiniz</option>
+            <option value="true" style="background-color: #28a745; color: #fff;">Aktif</option>
+            <option value="false" style="background-color: #dc3545; color: #fff;">Pasif</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary btn-lg">Kaydet</button>
+    </div>
+</form>
+

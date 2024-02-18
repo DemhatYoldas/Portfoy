@@ -1,8 +1,53 @@
-﻿
+﻿@model List<Portfoy.Models.TblContact>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
 
-<h2>Contact</h2>
+<br />
+<br />
+<br />
+
+<div>
+    <div class="white_shd full margin_bottom_30">
+        <div class="full graph_head">
+            <div class="heading1 margin_0">
+                <h2>Mesajlarım</h2>
+            </div>
+        </div>
+        <div class="table_section padding_infor_info">
+            <div class="table-responsive-sm">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Ad Soyad</th>
+                            <th>Mail</th>
+                            <th>Başlık</th>
+                            <th>Tarih</th>
+                            <th>Mesaj Görüntüle</th>
+                            <th>Durum</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ID</td>
+                                <td>@item.NameSurname</td>
+                                <td>@item.Mail</td>
+                                <td>@item.Title</td>
+                                <td>@item.SendDate</td>
+                                <td><a href="/Contact/DurumContact/@item.ID" class="btn btn-danger">İçerik Görüntüle</a></td>
+                                <td>@(item.İsRead == true ? "Aktif" : "Pasif")</td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 

@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "CreateConnection";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<br />
+<br />
+<br />
+<form class="form-control" method="post">
+    <div class="form-group">
+        <label for="Location" class="form-label h5">Konum </label>
+        <input type="text" class="form-control" id="Location" name="Location" placeholder="Konum Adı Giriniz" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Adress" class="form-label h5">Adres </label>
+        <input type="text" class="form-control" id="Adress" name="Adress"  placeholder="Adress  Giriniz" required>
+    </div>
+
+
+    <div class="form-group">
+        <label for="Number" class="form-label h5">Telefon No </label>
+        <input type="text" class="form-control" id="Number" name="Number" placeholder="Telefon Numaranızı Giriniz" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Mail" class="form-label h5">Mail </label>
+        <input type="text" class="form-control" id="Mail" name="Mail" placeholder="Mail Adresinizi Giriniz" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Durum" class="form-label h5">Durum</label>
+        <select class="form-select form-select-lg" id="Durum" name="Durum" required>
+            <option selected disabled>Durum Seçiniz</option>
+            <option value="true" style="background-color: #28a745; color: #fff;">Aktif</option>
+            <option value="false" style="background-color: #dc3545; color: #fff;">Pasif</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary btn-lg">Kaydet</button>
+    </div>
+</form>
