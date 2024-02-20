@@ -1,4 +1,5 @@
-﻿@model List<Portfoy.Models.TblProfile>
+﻿@model Tuple<List<Portfoy.Models.TblAdminbar>, List<Portfoy.Models.TblSkills>>
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
@@ -8,47 +9,61 @@
 <br />
 <br />
 
-<div>
-    <div class="white_shd full margin_bottom_30">
-        <div class="full graph_head">
-            <div class="heading1 margin_0">
-                <h2>Profil</h2>
+<div class="row column1">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="white_shd full margin_bottom_30">
+            <div class="full graph_head">
+                <div class="heading1 margin_0">
+                    <h2>Profilim</h2>
+                </div>
             </div>
-        </div>
-        <div class="table_section padding_infor_info">
-            <div class="table-responsive-sm">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Başlık</th>
-                            <th>Ad Soayad</th>
-                            <th>Açıklama</th>
-                            <th>Githup Url</th>
-                            <th>Sil</th>
-                            <th>Güncelle</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model)
+            <div class="full price_table padding_infor_info">
+                <div class="row">
+                    <!-- user profile section -->
+                    <!-- profile image -->
+                    <div class="col-lg-12">
+                        @foreach (var item in Model.Item1)
                         {
-                            <tr>
-                                <td>@item.ID</td>
-                                <td>@item.Header</td>
-                                <td>@item.NameSurname</td>
-                                <td>@item.Title</td>
-                                <td>@item.GtihupUrl</td>
-                                <td><a href="#" class="btn btn-danger">Sil</a></td>
-                                <td><a href="#" class="btn btn-success">Güncelle</a></td>
+                            <div class="full dis_flex center_text">
+                                <div class="profile_img"><img width="180" class="rounded-circle" src="@item.ImageUrl" alt="#" /></div>
+                                <div class="profile_contant">
+                                    <div class="contact_inner">
+                                        <h3>@item.NameSurname</h3>
+                                        <p><strong>Hakkında: </strong>@item.About</p>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fa fa-envelope-o"></i> : @item.Mail</li>
+                                            <li><i class="fa fa-phone"></i> : @item.Number</li>
+                                            <li>
+                                                <i class="fa fa-github"></i> : @item.Githup
+                                                <a class="fa fa-external-link" href="https://github.com/DemhatYoldas"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
 
-                            </tr>
+                                    <div class="user_progress_bar">
+                                        @foreach (var skill in Model.Item2)
+                                        {
+
+
+                                            <div class="progress_bar">
+                                                <!-- Skill Bars -->
+                                                <span class="skill" style="width:85%;">@skill.Title <span class="info_valume">@skill.progressbar%</span></span>
+                                                <div class="progress skill-bar ">
+                                                    <div class="progress-bar progress-bar-animated progress-bar-striped" role="progressbar" aria-valuenow="@skill.progressbar" aria-valuemin="0" aria-valuemax="100" style="width: @skill.progressbar%;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
                         }
-                    </tbody>
-                </table>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="col-md-2"></div>
     </div>
+    <!-- end row -->
 </div>
-
-
-

@@ -1,0 +1,56 @@
+﻿@model Portfoy.Models.TblExperience
+
+@{
+    ViewBag.Title = "UpdateExperience";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<br />
+<br />
+<br />
+
+    <form action="/Experience/UpdateExperience" method="post">
+        <!-- Post işlemi için form oluşturuluyor -->
+        <div class="form-control">
+            <strong>ID :</strong>
+            <input type="text" class="form-control" id="ID" name="ID" value="@Model.ID" hidden required>
+        </div>
+        <br/>
+        <div  class="form-control">
+            <strong>Pozisyon :</strong>
+            <input type="text" class="form-control" id="Title" name="Title" value="@Model.Title">
+        </div>
+        <br />
+
+        <div  class="form-control">
+            <strong>Firma Adı :</strong>
+            <input type="text" class="form-control" id="CompanyName" name="CompanyName" value="@Model.CompanyName">
+        </div>
+        <br />
+
+        <div  class="form-control">
+            <strong>Başlangıç Tarihi:</strong>
+            <input type="text" class="form-control" id="WorkingDate" name="WorkingDate" value="@Model.WorkingDate">
+        </div>
+        <br />
+        <div  class="form-control">
+            <strong>Bitiş Tarihi:</strong>
+            <input type="text" class="form-control" id="EndDate" name="EndDate" value="@Model.EndDate">
+        </div>
+        <br />
+        <div  class="form-control">
+            <strong>Durum:</strong>
+            <select class="form-select form-select-lg" id="Durum"  name="Durum" value="@Model.Durum" required>
+                <option selected disabled>Durum Seçiniz</option>
+                <option value="true" style="background-color: #28a745; color: #fff;">Devam Ediyor</option>
+                <option value="false" style="background-color: #dc3545; color: #fff;">Devam Etmiyor</option>
+            </select>
+        </div>
+        <br />
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Kaydet</button>
+            <a href="/Education/Index" class="btn btn-danger">Geridön</a>
+        </div>
+    </form>
+
+

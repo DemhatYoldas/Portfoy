@@ -25,6 +25,19 @@
           <Property Name="Header" Type="nvarchar" MaxLength="50" />
           <Property Name="ImageUrl" Type="nvarchar(max)" />
         </EntityType>
+        <EntityType Name="TblAdminbar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ImageUrl" Type="nvarchar(max)" />
+          <Property Name="NameSurname" Type="nvarchar" MaxLength="50" />
+          <Property Name="About" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="Githup" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
         <EntityType Name="TblCategory">
           <Key>
             <PropertyRef Name="ID" />
@@ -155,6 +168,7 @@
         <EntityContainer Name="DbPortfolioModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblAbout" EntityType="Self.TblAbout" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblAdminbar" EntityType="Self.TblAdminbar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblCategory" EntityType="Self.TblCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblConnection" EntityType="Self.TblConnection" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblContact" EntityType="Self.TblContact" Schema="dbo" store:Type="Tables" />
@@ -288,6 +302,7 @@
           <EntitySet Name="TblEducation" EntityType="DbPortfolioModel.TblEducation" />
           <EntitySet Name="TblSkills" EntityType="DbPortfolioModel.TblSkills" />
           <EntitySet Name="TblExperience" EntityType="DbPortfolioModel.TblExperience" />
+          <EntitySet Name="TblAdminbar" EntityType="DbPortfolioModel.TblAdminbar" />
         </EntityContainer>
         <EntityType Name="TblProfile">
           <Key>
@@ -342,6 +357,19 @@
           <Property Name="EndDate" Type="Int32" />
           <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Durum" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="TblAdminbar">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ImageUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="About" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Githup" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -493,6 +521,20 @@
                 <ScalarProperty Name="EndDate" ColumnName="EndDate" />
                 <ScalarProperty Name="WorkingDate" ColumnName="WorkingDate" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblAdminbar">
+            <EntityTypeMapping TypeName="DbPortfolioModel.TblAdminbar">
+              <MappingFragment StoreEntitySet="TblAdminbar">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Githup" ColumnName="Githup" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="About" ColumnName="About" />
+                <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

@@ -167,6 +167,9 @@
     <Compile Include="Models\TblAbout.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\TblAdminbar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\TblCategory.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -825,7 +828,6 @@
     <Content Include="Views\Default\NavbarPartial.cshtml" />
     <Content Include="Tema\Cv\Demhat YoldaşCv.pdf" />
     <Content Include="Views\Default\HeaderPartial.cshtml" />
-    <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Default\AboutPartial.cshtml" />
     <Content Include="Views\Default\ExpertisePartial.cshtml" />
     <Content Include="Views\Default\Deneme.cshtml" />
@@ -842,6 +844,9 @@
     <Content Include="Views\Contact\DurumContact.cshtml" />
     <Content Include="Views\Education\CreateEducation.cshtml" />
     <Content Include="Views\Education\UpdateEducation.cshtml" />
+    <Content Include="Views\Experience\CreateExperience.cshtml" />
+    <Content Include="Views\Experience\UpdateExperience.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

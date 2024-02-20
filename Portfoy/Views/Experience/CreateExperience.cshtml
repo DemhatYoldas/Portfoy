@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "CreateExperience";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<br />
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Deneyim Ekleme Sayfası</h5>
+                </div>
+                <div class="card-body">
+                    <form action="/Experience/CreateExperience" method="post">
+                        <!-- Post işlemi için form oluşturuluyor -->
+                        <div>
+                            <strong>Pozisyon :</strong>
+                            <input type="text" class="form-control" id="Title" name="Title" placeholder="Pozisyon Durumunu Giriniz">
+                        </div>
+                        <br />
+                        <div>
+                            <strong>Firma Adı :</strong>
+                            <input type="text" class="form-control" id="CompanyName" name="CompanyName" placeholder="Firma Adını Giriniz">
+                        </div>
+                        <br />
+                        <div>
+                            <strong>Başlangıç Tarihi:</strong>
+                            <input type="text" class="form-control" id="WorkingDate" name="WorkingDate" placeholder="Başlangıç Tarihi Giriniz">
+                        </div>
+                        <br />
+                        <div>
+                            <strong>Bitiş Tarihi:</strong>
+                            <input type="text" class="form-control" id="EndDate" name="EndDate" placeholder="Bitiş Tarihi Giriniz">
+                        </div>
+                        <br />
+                        <div>
+                            <strong>Durum:</strong>
+                            <select class="form-select form-select-lg" id="Durum" name="Durum" required>
+                                <option selected disabled>Durum Seçiniz</option>
+                                <option value="true" style="background-color: #28a745; color: #fff;">Devam Ediyor</option>
+                                <option value="false" style="background-color: #dc3545; color: #fff;">Devam Etmiyor</option>
+                            </select>
+                        </div>
+                        <br />
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-success">Kaydet</button>
+                            <a href="/Education/Index" class="btn btn-danger">Geridön</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

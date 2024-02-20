@@ -10,10 +10,12 @@ namespace Portfoy.Controllers
     public class ProfileController : Controller
     {
         DbPortfolioEntities db=new DbPortfolioEntities();
-        public ActionResult Index()
+       public ActionResult Index()
         {
-            var values=db.TblProfile.ToList();
-            return View(values);
+           var adminbar=db.TblAdminbar.ToList();
+           var skills=db.TblSkills.ToList();
+            var model= new Tuple<List<TblAdminbar>,List<TblSkills>>(adminbar,skills);
+            return View(model);
         }
     }
 }

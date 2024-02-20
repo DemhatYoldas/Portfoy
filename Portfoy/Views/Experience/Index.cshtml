@@ -25,7 +25,7 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Statü</th>
+                            <th>Pozisyon</th>
                             <th>Başlangıç Tarihi</th>
                             <th>Bitiş Tarihi</th>
                             <th>Firma Adı</th>
@@ -43,7 +43,7 @@
                                 <td>@item.WorkingDate</td>
                                 <td>@item.EndDate</td>
                                 <td>@item.CompanyName</td>
-                                <td>@item.Durum</td>
+                                <td style="color: @(item.Durum == true ? "green" : "red")">@Html.Raw(item.Durum == true ? "Aktif" : "Pasif")</td>
                                 <td><a href="/Experience/DeleteExperience/@item.ID" class="btn btn-danger">Sil</a></td>
                                 <td><a href="/Experience/UpdateExperience/@item.ID" class="btn btn-success">Güncelle</a></td>
 
