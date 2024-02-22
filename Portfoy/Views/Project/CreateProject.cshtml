@@ -4,5 +4,52 @@
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
 
-<h2>CreateProject</h2>
+<br />
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Proje Ekleme Sayfası</h5>
+                </div>
+                <div class="card-body">
+                    <form action="/Project/CreateProject" method="post">
+                        <!-- Post işlemi için form oluşturuluyor -->
+                        <div>
+                            <strong>Proje Adı :</strong>
+                            <input type="text" class="form-control" id="ProjectName" name="ProjectName" placeholder="Proje Adını Giriniz">
+                        </div>
+                        <br />
+                        <div>
+                            <strong>Proje Resmi :</strong>
+                            <input type="text" class="form-control" id="ProjectImageUrl" name="ProjectImageUrl" placeholder="Proje Resmini Giriniz">
+                        </div>
+                        <br />
+                        <div>
+                            <strong>Proje Url:</strong>
+                            <input type="text" class="form-control" id="ProjectUrl" name="ProjectUrl" placeholder="Proje Adresini Giriniz">
+                        </div>
+                        <br />
+                        
+                        <div>
+                            <strong>Durum:</strong>
+                            <select class="form-select form-select-lg" id="Durum" name="Durum" required>
+                                <option selected disabled>Durum Seçiniz</option>
+                                <option value="true" style="background-color: #28a745; color: #fff;">Aktif Et</option>
+                                <option value="false" style="background-color: #dc3545; color: #fff;">Pasif Et</option>
+                            </select>
+                        </div>
+                        <br />
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-success">Kaydet</button>
+                            <a href="/Project/Index" class="btn btn-danger">Geridön</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
