@@ -4,6 +4,7 @@
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
 
+
 <br />
 <br />
 <br />
@@ -12,40 +13,51 @@
         <div class="col-md-6 offset-md-3">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">Mesaj İçeriği</h5>
+                    <h5 class="card-title">Proje Ekleme Sayfası</h5>
                 </div>
                 <div class="card-body">
+                    <form  method="post">
+                        <!-- Post işlemi için form oluşturuluyor -->
+                        <div>
+                            <strong>Proje Adı :</strong>
+                            @Html.TextBoxFor(x => x.ProjectName, new { @class = "form-control" })
+                        </div>
+                        <br />
+                        <div>
+                            <strong>Proje Resmi :</strong>
+                            @Html.TextBoxFor(x => x.ProjectImageUrl, new { @class = "form-control" })
+                        </div>
+                        <br />
+                        <div>
+                            <strong>Proje Url:</strong>
+                            @Html.TextBoxFor(x => x.ProjectUrl, new { @class = "form-control" })
+                        </div>
+                        <br />
+                        <div>
+                            <strong>Proje Kategorisi:</strong>
+                           @Html.DropDownListFor(x=>x.ProjectCategory,(List<SelectListItem>)ViewBag.category,new {@class= "form-control" })
+                        </div>
+                        <br />
 
-                    <div>
-                        <strong>Ad Soyad:</strong> @Model.NameSurname
-                    </div>
-                    <br />
-                    <div>
-                        <strong>Mail:</strong> @Model.Mail
-                    </div>
-                    <br />
-                    <div>
-                        <strong>Tarih:</strong> @Model.SendDate
-                    </div>
-                    <br />
-                    <div>
-                        <strong>Konu:</strong> @Model.Title
-                    </div>
-                    <br />
-                    <div>
-                        <strong>Mesaj:</strong>
-                        <p><textarea class="form-control">@Model.Message</textarea></p>
-                    </div>
-                    <br />
-
-                </div>
-                <div class="card-footer">
-                    <a href="/Contact/isreadContact/@Model.ID" class="btn btn-primary">Okundu Olarak İşaretle</a>
-                    <a href="/Contact/Index" class="btn btn-danger">Sayfadan Çık</a>
+                        <div>
+                            <strong>Durum:</strong>
+                            <select class="form-control"  id="Durum" name="Durum" required>
+                                <option selected disabled>Durum Seçiniz</option>
+                                <option value="true" style="background-color: #28a745; color: #fff;">Aktif Et</option>
+                                <option value="false" style="background-color: #dc3545; color: #fff;">Pasif Et</option>
+                            </select>
+                        </div>
+                        <br />
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-success">Kaydet</button>
+                            <a href="/Project/Index" class="btn btn-danger">Geridön</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 

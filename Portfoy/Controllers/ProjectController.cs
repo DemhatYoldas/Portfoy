@@ -20,7 +20,14 @@ namespace Portfoy.Controllers
         [HttpGet]
         public ActionResult CreateProject()
         {
-           
+            List<SelectListItem> values = (from x in db.TblCategory.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text=x.CategoryName,
+                                               Value=x.ID.ToString(),
+
+                                           }).ToList();
+            ViewBag.category = values;
             return View();
         }
 
@@ -35,6 +42,14 @@ namespace Portfoy.Controllers
         [HttpGet]
         public ActionResult UpdateProject(int id)
         {
+            List<SelectListItem> values1 = (from x in db.TblCategory.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.CategoryName,
+                                               Value = x.ID.ToString(),
+
+                                           }).ToList();
+            ViewBag.category = values1;
             var values = db.TblProject.Find(id);
             return View(values);
         }
@@ -42,6 +57,7 @@ namespace Portfoy.Controllers
         [HttpPost]
         public ActionResult UpdateProject(TblProject P)
         {
+            
             db.TblProject.AddOrUpdate(P);
             db.SaveChanges();
             return RedirectToAction("Index");

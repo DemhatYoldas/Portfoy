@@ -1,4 +1,4 @@
-﻿
+﻿@model Portfoy.Models.TblProject
 @{
     ViewBag.Title = "CreateProject";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
@@ -19,23 +19,28 @@
                         <!-- Post işlemi için form oluşturuluyor -->
                         <div>
                             <strong>Proje Adı :</strong>
-                            <input type="text" class="form-control" id="ProjectName" name="ProjectName" placeholder="Proje Adını Giriniz">
+                            @Html.TextBoxFor(x => x.ProjectName, new { @class = "form-control" })
                         </div>
                         <br />
                         <div>
                             <strong>Proje Resmi :</strong>
-                            <input type="text" class="form-control" id="ProjectImageUrl" name="ProjectImageUrl" placeholder="Proje Resmini Giriniz">
+                            @Html.TextBoxFor(x => x.ProjectImageUrl, new { @class = "form-control" })
                         </div>
                         <br />
                         <div>
                             <strong>Proje Url:</strong>
-                            <input type="text" class="form-control" id="ProjectUrl" name="ProjectUrl" placeholder="Proje Adresini Giriniz">
+                            @Html.TextBoxFor(x => x.ProjectUrl, new { @class = "form-control" })
                         </div>
                         <br />
-                        
+                        <div>
+                            <strong>Proje Kategorisi:</strong>
+                           @Html.DropDownListFor(x=>x.ProjectCategory,(List<SelectListItem>)ViewBag.category, new {@class= "form-control"  })
+                        </div>
+                        <br />
+
                         <div>
                             <strong>Durum:</strong>
-                            <select class="form-select form-select-lg" id="Durum" name="Durum" required>
+                            <select class="form-control"  id="Durum" name="Durum" required>
                                 <option selected disabled>Durum Seçiniz</option>
                                 <option value="true" style="background-color: #28a745; color: #fff;">Aktif Et</option>
                                 <option value="false" style="background-color: #dc3545; color: #fff;">Pasif Et</option>
