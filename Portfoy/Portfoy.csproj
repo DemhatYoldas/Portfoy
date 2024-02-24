@@ -128,7 +128,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ConnectionController.cs" />
@@ -834,7 +833,6 @@
     <Content Include="Views\Default\ContactPartial.cshtml" />
     <Content Include="Views\Default\CopyrightPartial.cshtml" />
     <Content Include="Views\Default\JavaScriptPartial.cshtml" />
-    <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Category\CreateCategory.cshtml" />
     <Content Include="Views\Category\UpdateCategory.cshtml" />
     <Content Include="Views\Connection\CreateConnection.cshtml" />
@@ -852,6 +850,7 @@
     <Content Include="Views\SocialMedia\CreateSocialMedia.cshtml" />
     <Content Include="Views\Testimonial\CreateTestimonial.cshtml" />
     <Content Include="Views\Testimonial\UpdateTestimonial.cshtml" />
+    <Content Include="Views\Profile\UpdateProfile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

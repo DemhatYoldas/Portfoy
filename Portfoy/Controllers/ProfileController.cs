@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -17,5 +18,21 @@ namespace Portfoy.Controllers
             var model= new Tuple<List<TblAdminbar>,List<TblSkills>>(adminbar,skills);
             return View(model);
         }
+
+        //[HttpGet]
+        //public ActionResult UpdateProfile(int id)
+        //{
+        //    var values=db.TblProfile.Find(id);
+        //    return View(values);
+        //}
+
+        //[HttpPost]
+        //public ActionResult UpdateProfile(TblProfile T)
+        //{
+        //    db.TblProfile.AddOrUpdate(T);
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index");
+        //}
+
     }
 }
