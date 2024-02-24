@@ -13,13 +13,13 @@
     <div class="white_shd full margin_bottom_30">
         <div class="full graph_head">
             <div class="heading1 margin_0">
-                <h2>Yeteneklerim</h2>
+                <h2>Projelerim</h2>
+            </div>
+            <div>
+                <!-- Proje ekle butonu sağ tarafta yer alacak -->
+                <a class="btn btn-success float-right" href="/Skills/CreateSkills">Yetenek ekle</a>
             </div>
         </div>
-        <div>
-            <a class="btn btn-success" href="/Skills/CreateSkills">Yetenek ekle</a>
-        </div>
-
 
         <div class="table_section padding_infor_info">
             <div class="table-responsive-sm">
@@ -30,6 +30,7 @@
                             <th>Başlık</th>
                             <th>Açıklama</th>
                             <th>Yetenek Adı</th>
+                            <th>Yetenek Başarı oranı</th>
                             <th>Durum</th>
                             <th>Sil</th>
                             <th>Güncelle</th>
@@ -43,9 +44,25 @@
                                 <td>@item.Title</td>
                                 <td>@item.Description</td>
                                 <td>@item.Skills</td>
+                                <td>
+                                    <div class="progress text-bg-warning" role="progressbar" aria-label="Warning example" aria-valuenow=" @item.progressbar%" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar text-bg-warning" style="width: @item.progressbar%">@item.progressbar %</div>
+                                    </div>
+                                </td>
                                 <td>@item.Durum</td>
-                                <td><a href="/Skills/DeleteSkills/" class="btn btn-danger">Sil</a></td>
-                                <td><a href="/Skills/UpdateSkills/" class="btn btn-success">Güncelle</a></td>
+                                <td>
+                                    <a href="/Skills/DeleteSkills/@item.ID" class="btn btn-outline-danger">
+                                        @if (item.Durum.HasValue && item.Durum.Value)
+                                        {
+                                            <span style="color: red;">Sil</span>
+                                        }
+                                        else
+                                        {
+                                            <span style="color: orange;"><i class="fa fa-warning"></i> Geri Al</span>
+                                        }
+                                    </a>
+                                </td>
+                                <td><a href="/Skills/UpdateSkills/@item.ID" class="btn btn-success">Güncelle</a></td>
 
                             </tr>
                         }

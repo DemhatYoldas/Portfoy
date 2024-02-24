@@ -1,6 +1,6 @@
-﻿@model Portfoy.Models.TblSkills
+﻿@model Portfoy.Models.TblTestimonial
 @{
-    ViewBag.Title = "UpdateSkills";
+    ViewBag.Title = "UpdateTestimonial";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
 
@@ -18,23 +18,26 @@
                     <form method="post">
                         <!-- Post işlemi için form oluşturuluyor -->
                         <div>
-                            <strong>Başlık Adı :</strong>
-                            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                          <input hidden name="ID" value="@Model.ID" />
+                        </div>
+                        <div>
+                            <strong>Adı Soyadı :</strong>
+                            @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
                         </div>
                         <br />
                         <div>
-                            <strong>Yetenek Adı :</strong>
-                            @Html.TextBoxFor(x => x.Skills, new { @class = "form-control" })
-                        </div>
-                        <br />
-                        <div>
-                            <strong>Yetenek Yüzdeliği :</strong>
-                            @Html.TextBoxFor(x => x.progressbar, new { @class = "form-control" })
+                            <strong>Pozisyon :</strong>
+                            @Html.TextBoxFor(x => x.Position, new { @class = "form-control" })
                         </div>
                         <br />
                         <div>
                             <strong>Açıklama :</strong>
                             @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+                        </div>
+                        <br />
+                        <div>
+                            <strong>Resim Url :</strong>
+                            @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
                         </div>
                         <br />
                         <div>
@@ -48,7 +51,7 @@
                         <br />
                         <div class="card-footer">
                             <button type="submit" class="btn btn-success">Kaydet</button>
-                            <a href="/Skills/Index" class="btn btn-danger">Geridön</a>
+                            <a href="/Testimonial/Index" class="btn btn-danger">Geridön</a>
                         </div>
                     </form>
                 </div>
@@ -56,4 +59,3 @@
         </div>
     </div>
 </div>
-

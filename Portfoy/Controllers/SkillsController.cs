@@ -34,8 +34,8 @@ namespace Portfoy.Controllers
         [HttpGet]
         public ActionResult UpdateSkills(int id)
         {
-            var values = db.TblSkills.Find(id);
-            return View(values);
+            var value = db.TblSkills.Find(id);
+            return View(value);
         }
 
         [HttpPost]
@@ -46,7 +46,7 @@ namespace Portfoy.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult DeleteSkills(TblSkills id) 
+        public ActionResult DeleteSkills(int id) 
         {
             var skills = db.TblSkills.Find(id);
 

@@ -848,6 +848,10 @@
     <Content Include="Views\Project\UpdateProject.cshtml" />
     <Content Include="Views\Skills\CreateSkills.cshtml" />
     <Content Include="Views\Skills\UpdateSkills.cshtml" />
+    <Content Include="Views\SocialMedia\UpdateSocialMedia.cshtml" />
+    <Content Include="Views\SocialMedia\CreateSocialMedia.cshtml" />
+    <Content Include="Views\Testimonial\CreateTestimonial.cshtml" />
+    <Content Include="Views\Testimonial\UpdateTestimonial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

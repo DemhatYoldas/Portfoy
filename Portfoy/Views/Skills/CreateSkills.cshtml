@@ -1,8 +1,61 @@
-﻿
+﻿@model Portfoy.Models.TblSkills
 @{
     ViewBag.Title = "CreateSkills";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
 
-<h2>CreateSkills</h2>
+
+<br />
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title">Yetenek Ekleme Sayfası</h5>
+                </div>
+                <div class="card-body">
+                    <form action="/Skills/CreateSkills" method="post">
+                        <!-- Post işlemi için form oluşturuluyor -->
+                        <div>
+                            <strong>Başlık Adı :</strong>
+                            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                        </div>
+                        <br />
+                        <div>
+                            <strong>Yetenek Adı :</strong>
+                            @Html.TextBoxFor(x => x.Skills, new { @class = "form-control" })
+                        </div>
+                        <br />
+                        <div>
+                            <strong>Yetenek Yüzdeliği :</strong>
+                            @Html.TextBoxFor(x => x.progressbar, new { @class = "form-control" })
+                        </div>
+                        <br />
+                        <div>
+                            <strong>Açıklama :</strong>
+                            @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+                        </div>
+                        <br />
+                        <div>
+                            <strong>Durum:</strong>
+                            <select class="form-control" id="Durum" name="Durum" required>
+                                <option selected disabled>Durum Seçiniz</option>
+                                <option value="true" style="background-color: #28a745; color: #fff;">Aktif Et</option>
+                                <option value="false" style="background-color: #dc3545; color: #fff;">Pasif Et</option>
+                            </select>
+                        </div>
+                        <br />
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-success">Kaydet</button>
+                            <a href="/Skills/Index" class="btn btn-danger">Geridön</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 

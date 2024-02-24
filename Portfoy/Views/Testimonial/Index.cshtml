@@ -13,15 +13,13 @@
     <div class="white_shd full margin_bottom_30">
         <div class="full graph_head">
             <div class="heading1 margin_0">
-                <h2>
-                    Referanslarım
-                </h2>
+                <h2>Referanslarım</h2>
+            </div>
+            <div>
+                <!-- referans medya ekle butonu sağ tarafta yer alacak -->
+                <a class="btn btn-success float-right" href="/Testimonial/CreateTestimonial">Referans  ekle</a>
             </div>
         </div>
-        <div>
-            <a class="btn btn-success" href="/Testimonial/TestimonialCategory">Referans ekle</a>
-        </div>
-
 
         <div class="table_section padding_infor_info">
             <div class="table-responsive-sm">
@@ -48,8 +46,19 @@
                                 <td>@item.Position</td>
                                 <td>@item.ImageUrl</td>
                                 <td>@item.Durum</td>
-                                <td><a href="#" class="btn btn-danger">Sil</a></td>
-                                <td><a href="#" class="btn btn-success">Güncelle</a></td>
+                                <td>
+                                    <a href="/Testimonial/DeleteTestimonial/@item.ID" class="btn btn-outline-danger">
+                                        @if (item.Durum.HasValue && item.Durum.Value)
+                                        {
+                                            <span style="color: red;">Sil</span>
+                                        }
+                                        else
+                                        {
+                                            <span style="color: orange;"><i class="fa fa-warning"></i> Geri Al</span>
+                                        }
+                                    </a>
+                                </td>
+                                <td><a href="/Testimonial/UpdateTestimonial/@item.ID" class="btn btn-success">Güncelle</a></td>
 
                             </tr>
                         }

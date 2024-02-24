@@ -1,8 +1,9 @@
-﻿@model Portfoy.Models.TblSkills
+﻿@model Portfoy.Models.TblSocialMedia
 @{
-    ViewBag.Title = "UpdateSkills";
+    ViewBag.Title = "CreateSocialMedia";
     Layout = "~/Views/AdminLayout/_Layout.cshtml";
 }
+
 
 <br />
 <br />
@@ -12,31 +13,27 @@
         <div class="col-md-6 offset-md-3">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">Yetenek Ekleme Sayfası</h5>
+                    <h5 class="card-title">Sosyal Meyda Ekleme Sayfası</h5>
                 </div>
                 <div class="card-body">
-                    <form method="post">
+                    <form action="/SocialMedia/CreateSocialMedia" method="post">
                         <!-- Post işlemi için form oluşturuluyor -->
                         <div>
-                            <strong>Başlık Adı :</strong>
-                            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                            <strong>Sosyalmedya Adı :</strong>
+                            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
                         </div>
                         <br />
                         <div>
-                            <strong>Yetenek Adı :</strong>
-                            @Html.TextBoxFor(x => x.Skills, new { @class = "form-control" })
+                            <strong>Adres Url :</strong>
+                            @Html.TextBoxFor(x => x.Url, new { @class = "form-control" })
                         </div>
                         <br />
                         <div>
-                            <strong>Yetenek Yüzdeliği :</strong>
-                            @Html.TextBoxFor(x => x.progressbar, new { @class = "form-control" })
+                            <strong>Sosyalmedya Image :</strong>
+                            @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
                         </div>
                         <br />
-                        <div>
-                            <strong>Açıklama :</strong>
-                            @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
-                        </div>
-                        <br />
+                      
                         <div>
                             <strong>Durum:</strong>
                             <select class="form-control" id="Durum" name="Durum" required>
@@ -48,7 +45,7 @@
                         <br />
                         <div class="card-footer">
                             <button type="submit" class="btn btn-success">Kaydet</button>
-                            <a href="/Skills/Index" class="btn btn-danger">Geridön</a>
+                            <a href="/SocialMedia/Index" class="btn btn-danger">Geridön</a>
                         </div>
                     </form>
                 </div>
@@ -56,4 +53,3 @@
         </div>
     </div>
 </div>
-
