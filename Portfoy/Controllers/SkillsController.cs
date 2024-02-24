@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -15,5 +16,48 @@ namespace Portfoy.Controllers
             var values = db.TblSkills.ToList();
             return View(values);
         }
+
+        public ActionResult CreateSkills()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreateSkills(TblSkills s)
+        {
+            db.TblSkills.Add(s);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+
+        [HttpGet]
+        public ActionResult UpdateSkills(int id)
+        {
+            var values = db.TblSkills.Find(id);
+            return View(values);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateSkills(TblSkills S) 
+        {
+            db.TblSkills.AddOrUpdate(S);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DeleteSkills(TblSkills id) 
+        {
+            var skills = db.TblSkills.Find(id);
+
+            if (skills != null)
+            {
+                skills.Durum = !skills.Durum; // Durumun tersini alarak geçiş yap
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("Index");
+        }
+
     }
 }
