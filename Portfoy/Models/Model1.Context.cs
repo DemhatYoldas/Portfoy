@@ -26,7 +26,6 @@ namespace Portfoy.Models
         }
     
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<TblAbout> TblAbout { get; set; }
         public virtual DbSet<TblCategory> TblCategory { get; set; }
         public virtual DbSet<TblContact> TblContact { get; set; }
         public virtual DbSet<TblProject> TblProject { get; set; }
@@ -39,5 +38,6 @@ namespace Portfoy.Models
         public virtual DbSet<TblSkills> TblSkills { get; set; }
         public virtual DbSet<TblExperience> TblExperience { get; set; }
         public virtual DbSet<TblAdminbar> TblAdminbar { get; set; }
+        public virtual DbSet<TblAbout> TblAbout { get; set; }
     }
 }

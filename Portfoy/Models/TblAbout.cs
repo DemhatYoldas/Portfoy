@@ -19,5 +19,6 @@ namespace Portfoy.Models
         public string Description { get; set; }
         public string Header { get; set; }
         public string ImageUrl { get; set; }
+        public Nullable<bool> Durum { get; set; }
     }
 }
