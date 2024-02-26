@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Portfoy.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,10 @@ namespace Portfoy.Controllers
 {
     public class DashboardController : Controller
     {
-        // GET: Dashboard
+        DbPortfolioEntities db=new DbPortfolioEntities();
         public ActionResult Index()
         {
+            ViewBag.isreadCount = db.TblContact.Where(x => x.İsRead == true).Count();
             return View();
         }
     }

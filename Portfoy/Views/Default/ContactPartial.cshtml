@@ -38,29 +38,29 @@
             </div>
             </div>
             <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <form method="post" action="@Url.Action("ContactPartial", "Default")">
+                <form method="post" action="@Url.Action("CreateContact", "Contact")">
                     <div class="row g-3">
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="NameSurname" placeholder="Adınız " required>
+                                <input type="text" class="form-control" id="NameSurname" name="NameSurname" placeholder="Adınız " required>
                                 <label for="NameSurname">Adınız ve Soaydınız </label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="Mail" placeholder="Mail Adresiniz" required>
+                                <input type="text" class="form-control" id="Mail" name="Mail" placeholder="Mail Adresiniz" required>
                                 <label for="Mail">Mail Adresiniz</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="Title" placeholder="Konu " required>
+                                <input type="text" class="form-control" id="Title" name="Title" placeholder="Konu " required>
                                 <label for="Title">Konu</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="Mesajınızı giriniz" id="Message" required style="height: 100px"></textarea>
+                                <textarea class="form-control" placeholder="Mesajınızı giriniz" id="Message" name="Message" required style="height: 100px"></textarea>
                                 <label for="Message">Mesaj</label>
                             </div>
                         </div>

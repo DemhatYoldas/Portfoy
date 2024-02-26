@@ -141,6 +141,7 @@
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\SkillsController.cs" />
     <Compile Include="Controllers\SocialMediaController.cs" />
+    <Compile Include="Controllers\StatisticController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -828,7 +829,6 @@
     <Content Include="Views\Default\HeaderPartial.cshtml" />
     <Content Include="Views\Default\AboutPartial.cshtml" />
     <Content Include="Views\Default\ExpertisePartial.cshtml" />
-    <Content Include="Views\Default\Deneme.cshtml" />
     <Content Include="Views\Default\ProjectsPartial.cshtml" />
     <Content Include="Views\Default\TestimonialPartial.cshtml" />
     <Content Include="Views\Default\ContactPartial.cshtml" />
@@ -853,6 +853,7 @@
     <Content Include="Views\Testimonial\UpdateTestimonial.cshtml" />
     <Content Include="Views\Profile\UpdateProfile.cshtml" />
     <Content Include="Views\About\UpdateAbout.cshtml" />
+    <Content Include="Views\Statistic\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

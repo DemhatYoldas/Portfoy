@@ -51,18 +51,15 @@ namespace Portfoy.Controllers
 
         public ActionResult DeleteCategory(int id)
         {
-            var value = db.TblCategory.Find(id);
-            if (value!=null)
+            var category = db.TblCategory.Find(id);
+
+            if (category != null)
             {
-                value.Durum = false;
+                category.Durum = !category.Durum; // Durumun tersini alarak geçiş yap
                 db.SaveChanges();
-                return RedirectToAction("Index");
             }
-            else
-            {
-                return RedirectToAction("Index");
-            }
-            
+
+            return RedirectToAction("Index");
         }
 
        

@@ -16,6 +16,30 @@ namespace Portfoy.Controllers
             return View(values);
         }
 
+        [HttpGet]
+        public ActionResult CreateContact() 
+        {
+           
+            return View(); 
+        }
+
+        [HttpPost]
+        public ActionResult CreateContact(TblContact C) 
+        {
+             C.SendDate = DateTime.Now;
+            C.İsRead = true;
+            db.TblContact.Add(C);
+            db.SaveChanges();
+            return RedirectToAction("Index","Default");
+        }
+
+        //public ActionResult Contactcount()
+        //{
+        //    // gelen msj sayısını göstermek için yaptık ama eksik var sanırım topbarpartial içersinde viewbag çalışmadı 
+        //    int readMessageCount = db.TblContact.Count(c => c.İsRead==true);
+        //    ViewBag.ContactCount = readMessageCount;
+        //    return View();
+        //}
        
         public ActionResult DurumContact(int id)
         {
