@@ -65,7 +65,13 @@
                                 <div class="col-sm-6">
                                     <h5>@EducationItem.Title</h5>
                                     <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">@EducationItem.StartingDate - @EducationItem.EndDate</p>
+                                    @{
+                                        // StartingDate ve EndDate özelliklerini DateTime'a dönüştürme
+                                        DateTime startingDate = ((DateTime)EducationItem.StartingDate).Date;
+                                        DateTime endDate = ((DateTime)EducationItem.EndDate).Date;
+                                    }
+
+                                    <p class="text-primary mb-1">@startingDate.ToString("yyyy") - @endDate.ToString("yyyy")</p>
                                     <h6 class="mb-0">@EducationItem.EducationName</h6>
                                 </div>
                             }

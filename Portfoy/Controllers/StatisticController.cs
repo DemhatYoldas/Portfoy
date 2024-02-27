@@ -17,6 +17,11 @@ namespace Portfoy.Controllers
             ViewBag.messgaCount=db.TblContact.Count();
             ViewBag.netProject = db.TblProject.Where(x => x.ProjectCategory == 1).Count();
             ViewBag.isreadCount=db.TblContact.Where(x=>x.İsRead==true).Count();
+            ViewBag.project = db.TblProject.Count();
+            ViewBag.phpproject = db.TblProject.Where(x=>x.ProjectCategory==2).Count();
+            ViewBag.OfmessgaCount = db.TblContact.Where(x=>x.İsRead==false).Count();
+            ViewBag.skills=db.TblSkills.Count();
+            ViewBag.referance=db.TblTestimonial.Count();
             //ViewBag.lastprojectname = db.LastProjectName().firstorDefault();
             return View();
         }
