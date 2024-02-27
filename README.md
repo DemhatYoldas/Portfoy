@@ -7,6 +7,7 @@ Projeyi İnceleme
 Projeyi incelemek için aşağıdaki görsellere göz atabilirsiniz:
 
 Diyagram
+
 ![diyagram0](https://github.com/DemhatYoldas/Portfoy/assets/64671581/626e5a60-af1f-4ba8-b7a3-f7d63bd24083)
 
 
@@ -16,14 +17,16 @@ Portföy
 
 ![2](https://github.com/DemhatYoldas/Portfoy/assets/64671581/9edb02fe-5d50-422e-9604-093a407357b8)
 
+![3](https://github.com/DemhatYoldas/Portfoy/assets/64671581/7bb237c8-fd57-474e-a800-7c0c3d576db9)
+
 ![3 1](https://github.com/DemhatYoldas/Portfoy/assets/64671581/b32c58e6-371b-4d58-9f7c-182ddbc556c7)
 
-![3](https://github.com/DemhatYoldas/Portfoy/assets/64671
+![4](https://github.com/DemhatYoldas/Portfoy/assets/64671581/464cc1eb-12bd-4a85-a0db-97eb80c90040)
 
-![4](https://github.com/DemhatYoldas/Portfoy/assets/64671581/bfb56e6d-1f2c-4454-9a15-57ab1734b026)
-581/5637c6de-aed6-4e52-a99a-e8884c0723d3)
+![4 1](https://github.com/DemhatYoldas/Portfoy/assets/64671581/7bb50d14-b1f1-4d43-b9cf-8a3a3f5baf2a)
 
-![4 1](https://github.com/DemhatYoldas/Portfoy/assets/64671581/fdf9aee8-d93d-43d1-9873-059d6eac3048)
+![4 2](https://github.com/DemhatYoldas/Portfoy/assets/64671581/7a45676e-fa71-4784-a910-18c0e5924cf5)
+
 
 ![5](https://github.com/DemhatYoldas/Portfoy/assets/64671581/8b2cfb20-df49-4b51-a1a9-0bf5240dda2c)
 
